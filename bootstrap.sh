@@ -20,6 +20,7 @@ CASKS=(
     keybase
     skype
     slack
+    spotify
     vagrant
     virtualbox
 )
