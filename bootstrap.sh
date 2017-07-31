@@ -6,8 +6,8 @@ PACKAGES=(
     arp-scan
     git
     hub
-    keybase
     jq
+    gpg
     tmux
     vim
     wget
@@ -17,6 +17,7 @@ CASKS=(
     dropbox
     google-chrome
     iterm2
+    keybase
     skype
     slack
     vagrant
