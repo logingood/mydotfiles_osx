@@ -8,6 +8,7 @@ PACKAGES=(
     hub
     jq
     gpg
+    terraform
     tmux
     vim
     wget
@@ -15,6 +16,7 @@ PACKAGES=(
 
 CASKS=(
     dropbox
+    docker
     google-chrome
     iterm2
     keybase
