@@ -16,3 +16,9 @@ alias gitlog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Cres
 if [[ -s `which direnv` ]]; then
   eval "$(direnv hook zsh)"
 fi
+
+
+[ -d /usr/local/sbin ] && PATH=/usr/local/sbin:$PATH
+
+[ -f ~/.secrets.zsh ] && source ~/.secrets.zsh
+[ -f ~/.local.zsh ] && source ~/.local.zsh

@@ -23,9 +23,6 @@ zmodules=(directory environment git git-info history input utility meta custom \
 # Prompt
 #
 
-# Set your desired prompt here
-zprompt_theme='steeef'
-
 #
 # Completion
 #

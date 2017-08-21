@@ -10,6 +10,8 @@ PACKAGES=(
     gpg
     terraform
     tmux
+    ipmitool
+    xpanes
     vim
     wget
 )
@@ -19,6 +21,7 @@ CASKS=(
     docker
     google-chrome
     iterm2
+    hammerspoon
     keybase
     skype
     slack

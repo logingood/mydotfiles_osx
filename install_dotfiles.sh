@@ -6,6 +6,7 @@ GIT=`which git`
 PATHOGEN="https://github.com/tpope/vim-pathogen"
 VIM_PLUGINS=( \
   https://github.com/airblade/vim-gitgutter \
+  https://github.com/saltstack/salt-vim.git \
   https://github.com/tpope/vim-fugitive \
   https://github.com/vim-scripts/indentpython.vim \
   https://github.com/tomasr/molokai \
@@ -76,12 +77,12 @@ get_ssh_keys(){
 }
 
 run_all(){
-  get_zim
-  get_fzf
-  get_pathogen
-  get_vim_plugins
-  get_dotfiles
-  symlink_dotfiles
+#  get_zim
+#  get_fzf
+#  get_pathogen
+#  get_vim_plugins
+#  get_dotfiles
+#  symlink_dotfiles
   get_ssh_keys
 }
 
