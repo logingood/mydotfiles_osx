@@ -1,6 +1,7 @@
 [user]
-	email = muhtarov.mr@gmail.com
-	name = Murat Mukhtarov
-	signingkey = 538AE47DE8481C5C5792F921BF7B5B12AB4793A5
+	email = good_email_goos_here
+	signingkey = C861C6E8799A9E26
+[url "git@github.com:"]
+	insteadOf = https://github.com/
 [commit]
 	gpgsign = true
