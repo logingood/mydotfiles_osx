@@ -96,6 +96,9 @@ install_casks(){
 }
 
 install_fonts(){
+  brew tap caskroom/fonts
+  brew install fontconfig
+  brew cask install font-hack-nerd-font
   brew cask install ${FONTS[@]}
 }
 

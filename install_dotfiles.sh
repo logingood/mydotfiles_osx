@@ -43,11 +43,11 @@ get_fzf(){
 
 get_pathogen() {
   git clone $PATHOGEN ~/.vim
-  mkdir -p ~/.vim/bundle 
+  mkdir -p ~/.vim/bundle
 }
 
 get_dotfiles() {
-  git clone https://github.com/murat1985/$DOTFILES ~/$DOTFILES
+  git clone https://github.com/logingood/$DOTFILES ~/$DOTFILES
 }
 
 symlink_dotfiles(){
@@ -58,6 +58,10 @@ symlink_dotfiles(){
   done
 }
 
+install_ycmd() {
+  cd ~/.nvim/bundle/YouCompleteMe
+  ./install.py --clang-completer --go-completer
+}
 
 get_vim_plugins() {
   cd ~/.vim/bundle
@@ -78,12 +82,12 @@ get_ssh_keys(){
 
 run_all(){
 #  get_zim
-#  get_fzf
+  get_fzf
 #  get_pathogen
 #  get_vim_plugins
 #  get_dotfiles
 #  symlink_dotfiles
-  get_ssh_keys
+#  get_ssh_keys
 }
 
 run_all

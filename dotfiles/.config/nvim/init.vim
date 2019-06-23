@@ -19,6 +19,7 @@ Plugin 'scrooloose/nerdtree'				        "Midnight commander style tree view.
 Plugin 'tpope/vim-surround'				            "Parentheses, brackets, quotes, XML tags and more.
 Plugin 'terryma/vim-multiple-cursors'			    "Sublime text style multi cursor.
 Plugin 'vim-airline/vim-airline'			        "Lean and mean status and tabline for vim that's light as air. Based on powerline.
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Mattn/emmet-vim'				            "Provides support for expanding abbreviated HTML + CSS.
 Plugin 'tomtom/tcomment_vim'				        "An extensible & universal comment vim-plugin that also handles embedded filetypes.
 Plugin 'Raimondi/delimitMate'				        "Provides insert mode auto-completion for quotes, parentheses and brackets etc.
@@ -41,8 +42,9 @@ Plugin 'fatih/vim-go'                               "Go language plugin
 "Colorschemes
 Plugin 'shannonmoeller/vim-monokai256'
 Plugin 'junegunn/seoul256.vim'                      "Low contrast vim colour scheme based on Seoul Colors
-Plugin 'vim-airline/vim-airline-themes'             "Themes for airline.
 
+" Tmux status line
+Plugin 'edkolev/tmuxline.vim'
 call vundle#end()			    		"required
 
 filetype plugin indent on 				"required
@@ -54,8 +56,6 @@ set background=dark
 
 let g:monokai256_background = 233
 colo monokai256
-
-let g:airline_theme='term'
 
 " FZF
 set rtp+=/usr/local/opt/fzf
@@ -135,3 +135,5 @@ set shiftwidth=2
 set expandtab
 
 autocmd BufWritePre *.rb,*.go,*.py,*.sh,*.json,*.md,.gitconfig,*.lua,*.c,*.cpp,*.h,*.js %s/\s\+$//e
+
+let g:airline_theme='molokai'
