@@ -56,7 +56,9 @@ let &t_Co=256
 set background=dark
 
 let g:monokai256_background = 233
+" colo monokai256
 colo monokai256
+
 
 " FZF
 set rtp+=/usr/local/opt/fzf
@@ -141,5 +143,5 @@ set expandtab
 autocmd BufWritePre *.rb,*.go,*.py,*.sh,*.json,*.md,.gitconfig,*.lua,*.c,*.cpp,*.h,*.js %s/\s\+$//e
 
 let g:airline_theme='molokai'
+hi Comment          ctermfg=247
 
-colorscheme vim-monokai-tasty
