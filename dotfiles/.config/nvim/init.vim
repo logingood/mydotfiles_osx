@@ -40,6 +40,7 @@ Plugin 'hashivim/vim-terraform'                     "Syntax for terraform files
 Plugin 'fatih/vim-go'                               "Go language plugin
 
 "Colorschemes
+Plugin 'patstockwell/vim-monokai-tasty'
 Plugin 'shannonmoeller/vim-monokai256'
 Plugin 'junegunn/seoul256.vim'                      "Low contrast vim colour scheme based on Seoul Colors
 
@@ -114,6 +115,9 @@ endfunction
 " Do not pad delimiters with spaces
 let delimitMate_expand_space = 0
 
+" Cursor dark grey
+highlight Visual cterm=bold ctermbg=darkgray ctermfg=NONE
+
 " Highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red
 
@@ -137,3 +141,5 @@ set expandtab
 autocmd BufWritePre *.rb,*.go,*.py,*.sh,*.json,*.md,.gitconfig,*.lua,*.c,*.cpp,*.h,*.js %s/\s\+$//e
 
 let g:airline_theme='molokai'
+
+colorscheme vim-monokai-tasty
