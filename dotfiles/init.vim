@@ -1,5 +1,5 @@
-let g:python_host_prog='/usr/local/bin/python2'
-let g:python3_host_prog='/usr/local/bin/python3'
+let g:python_host_prog='~/macports/bin/python2.7'
+let g:python3_host_prog='~/macports/bin/python3.7'
 
 set nocompatible
 filetype off
@@ -39,6 +39,7 @@ Plugin 'othree/javascript-libraries-syntax.vim'		"Syntax for Javascript librarie
 Plugin 'kylef/apiblueprint.vim'                     "Syntax highlighting and linting for API Blueprint.
 Plugin 'hashivim/vim-terraform'                     "Syntax for terraform files
 Plugin 'fatih/vim-go'                               "Go language plugin
+Plugin 'mdempsky/gocode', {'rtp': 'nvim/'}
 
 "Colorschemes
 Plugin 'patstockwell/vim-monokai-tasty'
@@ -146,3 +147,5 @@ autocmd BufWritePre *.rb,*.go,*.py,*.sh,*.json,*.md,.gitconfig,*.lua,*.c,*.cpp,*
 let g:airline_theme='molokai'
 hi Comment          ctermfg=247
 let g:airline#extensions#tmuxline#enabled = 0
+set rtp+=/Users/mmukhtarov/macports/share/fzf/vim
+
