@@ -39,6 +39,7 @@ Plugin 'othree/javascript-libraries-syntax.vim'		"Syntax for Javascript librarie
 Plugin 'kylef/apiblueprint.vim'                     "Syntax highlighting and linting for API Blueprint.
 Plugin 'hashivim/vim-terraform'                     "Syntax for terraform files
 Plugin 'fatih/vim-go'                               "Go language plugin
+Plugin 'fatih/molokai'
 Plugin 'mdempsky/gocode', {'rtp': 'nvim/'}
 
 "Colorschemes
@@ -57,10 +58,13 @@ syntax on
 let &t_Co=256
 set background=dark
 
-let g:monokai256_background = 233
-" colo monokai256
+let g:molokai256_background = 233
 colo monokai256
+" colo monokai256
 
+let g:rehash256 = 1
+let g:molokai_original = 1
+" colorscheme molokai
 
 " FZF
 set rtp+=/usr/local/opt/fzf
@@ -79,6 +83,7 @@ set expandtab
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype ruby,yaml,yml setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
+
 
 set clipboard=unnamed
 set iskeyword+=-
@@ -133,10 +138,10 @@ let g:go_highlight_functions = 1
 let g:go_highlight_function_arguments = 1
 let g:go_highlight_function_calls = 1
 let g:go_highlight_extra_types = 1
-let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
 let g:go_highlight_variable_declarations = 1
+let g:go_highlight_operators = 1
 
 set tabstop=2
 set shiftwidth=2
@@ -149,3 +154,5 @@ hi Comment          ctermfg=247
 let g:airline#extensions#tmuxline#enabled = 0
 set rtp+=/Users/mmukhtarov/macports/share/fzf/vim
 
+
+set foldexpr=getline(v:lnum)[0]==\"\\n\"
