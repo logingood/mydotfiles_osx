@@ -6,6 +6,7 @@ export PATH=$HOME/macports/bin:$HOME/macports/sbin:$PATH
 export MANPATH=$HOME/macports/share/man:$MANPATH
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.aws.sh ] && source ~/.aws.sh
 
 alias vim="nvim"
 alias vi="nvim"
@@ -19,8 +20,13 @@ fi
 
 eval "$(starship init zsh)"
 export GPG_TTY=`tty`
-export SAVEHIST=1000000
-export HISTFILE=~/.zhistory
+
+# Save history
+HISTFILE=~/.zsh_history
+HISTSIZE=30000
+SAVEHIST=30000
+setopt appendhistory
+
 export GOPATH=$HOME/Code/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:~/.cargo/bin
@@ -28,3 +34,9 @@ export PATH=$PATH:~/bin
 
 export LS_COLORS="$(vivid generate molokai)"
 source ~/Code/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/mmukhtarov/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/mmukhtarov/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/mmukhtarov/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/mmukhtarov/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
