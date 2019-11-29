@@ -1,0 +1,26 @@
+[git_status]
+disabled = true
+[ruby]
+disabled = true
+[golang]
+disabled = true
+[java]
+disabled = true
+[rust]
+disabled = true
+[python]
+disabled = true
+[nodejs]
+disabled = true
+[conda]
+disbaled = true
+[dotnet]
+disabled = true
+[aws]
+disabled = true
+[kubernetes]
+disabled = true
+[nix_shell]
+disabled = true
+[package]
+disabled = true
