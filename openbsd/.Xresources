@@ -1,0 +1,8 @@
+XTerm*utf8: 1
+!XTerm*faceName: DejaVu Sans Mono
+XTerm*faceName: xft:DejaVu Sans Mono for Powerline:pixelsize=14:antialias=true
+XTerm*faceSize: 10
+XTerm*renderFont: true
+XTerm*cursorBlink: true
+XTerm*saveLines: 99999
+XTerm*cursorColor: gray
