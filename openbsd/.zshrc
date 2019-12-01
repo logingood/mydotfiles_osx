@@ -10,9 +10,12 @@ if [[ -s `which direnv` ]]; then
 fi
 
 eval "$(~/.cargo/bin/starship init zsh)"
-export GPG_TTY=`tty`
-export SAVEHIST=1000000
-export HISTFILE=~/.zhistory
+# Save history
+HISTFILE=~/.zsh_history
+HISTSIZE=30000
+SAVEHIST=30000
+setopt appendhistory
+
 export GOPATH=$HOME/Code/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:~/.cargo/bin
