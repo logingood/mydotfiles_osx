@@ -9,7 +9,7 @@ if [[ -s `which direnv` ]]; then
   eval "$(direnv hook zsh)"
 fi
 
-eval "$(/home/foobar/.cargo/bin/starship init zsh)"
+eval "$(~/.cargo/bin/starship init zsh)"
 export GPG_TTY=`tty`
 export SAVEHIST=1000000
 export HISTFILE=~/.zhistory
