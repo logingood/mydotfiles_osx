@@ -29,5 +29,5 @@ export CLICOLOR=1
 export GREP_COLOR="37;45"
 export GREP_COLORS="mt=37;45"
 export TERM=xterm-256color
-alias ls="colorls"
 export LC_ALL=en_US.UTF-8
+export EDITOR=nvim
