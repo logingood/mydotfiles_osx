@@ -14,7 +14,7 @@ call vundle#begin('~/.nvim/bundle')
 
 "Vim extensions.
 Plugin 'VundleVim/Vundle.vim' 				        "Package manager.
-Plugin 'Valloric/YouCompleteMe'				        "Autocompleter for C family languages.
+" Plugin 'Valloric/YouCompleteMe'				        "Autocompleter for C family languages.
 Plugin 'scrooloose/nerdtree'				        "Midnight commander style tree view.
 Plugin 'tpope/vim-surround'				            "Parentheses, brackets, quotes, XML tags and more.
 Plugin 'terryma/vim-multiple-cursors'			    "Sublime text style multi cursor.
@@ -42,6 +42,9 @@ Plugin 'fatih/vim-go'                               "Go language plugin
 Plugin 'fatih/molokai'
 Plugin 'mdempsky/gocode', {'rtp': 'nvim/'}
 
+" Phonetics
+Plugin 'soywod/vim-phonetics'
+
 "Colorschemes
 Plugin 'patstockwell/vim-monokai-tasty'
 Plugin 'shannonmoeller/vim-monokai256'
@@ -49,7 +52,27 @@ Plugin 'junegunn/seoul256.vim'                      "Low contrast vim colour sch
 
 " Tmux status line
 Plugin 'edkolev/tmuxline.vim'
+
+" scala
+" Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+Plugin 'derekwyatt/vim-scala'
+
+" CoC
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+
 call vundle#end()			    		"required
+
+" CoC config
+" use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
 
 filetype plugin indent on 				"required
 
@@ -152,7 +175,10 @@ autocmd BufWritePre *.rb,*.go,*.py,*.sh,*.json,*.md,.gitconfig,*.lua,*.c,*.cpp,*
 let g:airline_theme='molokai'
 hi Comment          ctermfg=247
 let g:airline#extensions#tmuxline#enabled = 0
-set rtp+=/Users/mmukhtarov/macports/share/fzf/vim
 
+" solargraph
+let g:coc_global_extensions = ['coc-solargraph']
 
-set foldexpr=getline(v:lnum)[0]==\"\\n\"
+" go coc
+autocmd BufWritePre *.go :call CocAction('organizeImport')
+

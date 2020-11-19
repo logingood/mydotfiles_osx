@@ -112,24 +112,38 @@ local windowLayout = {
   {"iTerm2",    nil,          laptopScreen, hs.layout.right70,   nil, nil}
 }
 hs.layout.apply(windowLayout)
+local laptopScreen = "U2879G6"
+local windowLayout = {
+  {"Slack",  nil,          laptopScreen, hs.layout.left40,    nil, nil},
+  {"iTerm2",    nil,          laptopScreen, hs.layout.right60,   nil, nil}
+}
+hs.layout.apply(windowLayout)
 
 local laptopScreen = "Color LCD"
 local windowLayout = {
-  {"Firefox",  nil,          laptopScreen, hs.layout.maximized,    nil, nil}
+  {"Firefox",  nil,          laptopScreen, hs.layout.left40,    nil, nil},
+  {"Spotify",  nil,          laptopScreen, hs.layout.right60,    nil, nil}
 }
 hs.layout.apply(windowLayout)
 
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Down", function()
   local laptopScreen = "DELL U2515H"
   local windowLayout = {
-    {"Slack",  nil,          laptopScreen, hs.layout.left30,    nil, nil},
-    {"iTerm2",    nil,          laptopScreen, hs.layout.right70,   nil, nil}
+    {"Slack",  nil,          laptopScreen, hs.layout.left40,    nil, nil},
+    {"iTerm2",    nil,          laptopScreen, hs.layout.right60,   nil, nil}
+  }
+  hs.layout.apply(windowLayout)
+
+  local laptopScreen = "U2879G6"
+  local windowLayout = {
+    {"Slack",  nil,          laptopScreen, hs.layout.left40,    nil, nil},
+    {"iTerm2",    nil,       laptopScreen, hs.layout.right60,   nil, nil}
   }
   hs.layout.apply(windowLayout)
 
   local laptopScreen = "Color LCD"
   local windowLayout = {
-    {"Firefox",  nil,          laptopScreen, hs.layout.maximized,    nil, nil}
+    {"Firefox",  nil,          laptopScreen, hs.layout.maximized,    nil, nil},
   }
   hs.layout.apply(windowLayout)
 end)
@@ -142,15 +156,24 @@ hs.alert.show("Config loaded")
 
 -- terminal + firefox same screen
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "W", function()
-  local laptopScreen = "DELL U2515H"
+  --local laptopScreen = "DELL U2515H"
+  --local windowLayout = {
+--    {"iTerm2",    nil,          laptopScreen, hs.layout.right30,   nil, nil},
+--    {"zoom.us",  nil,          laptopScreen, hs.layout.left70,    nil, nil}
+--  }
+--  hs.layout.apply(windowLayout)
+
+  local laptopScreen = "U2879G6"
   local windowLayout = {
-    {"Firefox",  nil,          laptopScreen, hs.layout.left50,    nil, nil},
-    {"iTerm2",    nil,          laptopScreen, hs.layout.right50,   nil, nil}
+    {"iTerm2",    nil,          laptopScreen, hs.layout.right50,   nil, nil},
+    {"zoom.us",  nil,          laptopScreen, hs.layout.left50,    nil, nil}
   }
   hs.layout.apply(windowLayout)
+
   local laptopScreen = "Color LCD"
   local windowLayout = {
-    {"Slack",  nil,          laptopScreen, hs.layout.left70,    nil, nil}
+    {"Firefox",  nil,         laptopScreen, hs.layout.left50,    nil, nil},
+    {"Slack",  nil,          laptopScreen, hs.layout.right50,    nil, nil}
   }
   hs.layout.apply(windowLayout)
 end)
